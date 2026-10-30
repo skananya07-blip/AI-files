@@ -11,9 +11,11 @@ import matplotlib.pyplot as plt
 ```
 ## Loading the dataset
 # Load the Iris dataset
-'''
+```
 iris = load_iris()
 X = iris.data # create only input data not target
-'''
+```
 # Create a DataFrame from the Iris dataset (for visualization purpose only)
+```
 df = pd.DataFrame(X, columns=iris.feature_names)
+```

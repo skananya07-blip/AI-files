@@ -19,3 +19,13 @@ X = iris.data # create only input data not target
 ```
 df = pd.DataFrame(X, columns=iris.feature_names)
 ```
+df.head()
+# Visualize the clusters
+```
+plt.scatter(X[:, 0], X[:, 1])
+#plt.scatter(centroids[:, 0], centroids[:, 1], marker='X', s=200, c='red')
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
+plt.title('Distribution of Iris data')
+```
+plt.show()

@@ -39,3 +39,25 @@ for k in range(1, 11):
     kmeans.fit(X)
     wcss.append(kmeans.inertia_)# here inertia calculate sum of square distance in each cluster
 ```
+# Initialize an empty list to store the within-cluster sum of squares
+wcss = []
+
+# Try different values of k
+```
+for k in range(1, 11):
+    kmeans = KMeans(n_clusters=k,n_init='auto', random_state=42)
+    kmeans.fit(X)
+    wcss.append(kmeans.inertia_)# here inertia calculate sum of square distance in each cluster
+```
+# Initialize an empty list to store the within-cluster sum of squares
+wcss = []
+
+# Try different values of k
+```
+for k in range(1, 11):
+    kmeans = KMeans(n_clusters=k,n_init='auto', random_state=42)
+    kmeans.fit(X)
+    wcss.append(kmeans.inertia_)# here inertia calculate sum of square distance in each cluster
+```
+print("Best Parameters:", best_params)
+print("Best Score:", best_score)

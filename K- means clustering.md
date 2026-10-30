@@ -29,3 +29,13 @@ plt.ylabel(iris.feature_names[1])
 plt.title('Distribution of Iris data')
 ```
 plt.show()
+# Initialize an empty list to store the within-cluster sum of squares
+wcss = []
+
+# Try different values of k
+```
+for k in range(1, 11):
+    kmeans = KMeans(n_clusters=k,n_init='auto', random_state=42)
+    kmeans.fit(X)
+    wcss.append(kmeans.inertia_)# here inertia calculate sum of square distance in each cluster
+```

@@ -61,3 +61,26 @@ for k in range(1, 11):
 ```
 print("Best Parameters:", best_params)
 print("Best Score:", best_score)
+# Perform k-means clustering
+```
+k = 3 # Number of clusters
+kmeans = KMeans(n_clusters=k,n_init='auto', random_state=42)
+```
+kmeans.fit(X)
+```
+# Get the cluster labels and centroids
+labels = kmeans.labels_
+centroids = kmeans.cluster_centers_
+
+# Add the cluster labels to the DataFrame
+```
+df['Cluster'] = labels
+# Visualize the clusters
+plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='viridis')
+plt.scatter(centroids[:, 0], centroids[:, 1], marker='X', s=200, c='red')
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
+plt.title('K-means Clustering')
+```
+df.head()# displaying the data with new label-Cluster
+plt.show()
